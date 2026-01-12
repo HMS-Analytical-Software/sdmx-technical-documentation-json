@@ -1,13 +1,17 @@
-# Field Guide to SDMX-JSON Data Message 2.0.0 Objects (aligned with SDMX 3.0.0)
+# Field Guide to SDMX-JSON Data Message 2.1.0 Objects (aligned with SDMX 3.1)
 
 ## message
 
 Message is the top level object and it contains the data as well as the
 structural metadata needed to interpret those data.
 
-- meta - *Object* *optional*. A *[meta](#meta)* object that contains
-    non-standard meta-information and basic technical information about the
-    message, such as when it was prepared and who has sent it.
+- $schema - *String* *optional*. Contains the URL to the schema allowing to
+    validate the message. This also allows identifying the version of SDMX-JSON
+    format used in this message.
+    **Providing the link to the SDMX-JSON schema is recommended.**
+- meta - *Object*. A *[meta](#meta)* object that contains non-standard
+    meta-information and basic technical information about the message, such as
+    when it was prepared and who has sent it.
 - data - *Object* *optional*. *[Data](#data)* contains the message's "primary
     data".
 - errors - *Array* *optional*. *Errors* field is an array of *[error](#error)*
